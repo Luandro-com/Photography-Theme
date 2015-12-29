@@ -1,0 +1,117 @@
+<!--
+V1.1.2
+======
+
+- Lazyload Home div
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:url" content="http://www.jamillequeiroz.com" />
+    <meta property="og:title" content="Jamille Queiroz Fotografia" />
+    <meta property="og:image" content="http://jamillequeiroz.com/build/7c77824edf86a5628c0c382b7b234d81.jpg" />    
+    <title>Jamille Queiroz Fotografia</title>
+    <meta name="description" content="Portfólio fotográfico de Jamille Queiroz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="build/vendor.css?v=1.1.2">
+    <link rel="stylesheet" href="build/app.css?v=1.1.2">
+    <style>
+    body {
+    }
+    #app {
+      transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+    }
+    #loader,
+    #loader:before,
+    #loader:after {
+        background: #000;
+        -webkit-animation: load1 1s infinite ease-in-out;
+        animation: load1 1s infinite ease-in-out;
+        width: 1em;
+        height: 4em;
+    }
+    
+    #loader:before,
+    #loader:after {
+        position: absolute;
+        top: 0;
+        content: '';
+    }
+    
+    #loader:before {
+        left: -1.5em;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    
+    #loader {
+        text-indent: -9999em;
+        margin: 25% 50%;
+        position: absolute;
+        font-size: 11px;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    
+    #loader:after {
+        left: 1.5em;
+    }
+    
+    @-webkit-keyframes load1 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0 #000;
+            height: 4em;
+        }
+        40% {
+            box-shadow: 0 -2em #000;
+            height: 5em;
+        }
+    }
+    
+    @keyframes load1 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0 #000;
+            height: 4em;
+        }
+        40% {
+            box-shadow: 0 -2em #000;
+            height: 5em;
+        }
+    }
+    .delete {
+      opacity: 0;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+    }
+    .show {
+      opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="loader">Carregando...</div>
+    <div id="app" class="delete"></div>
+    <script src="build/vendor.js?v=1.1.2"></script>
+    <script src="build/app.js?v=1.1.2"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.fade-bottom:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 15%;
+  bottom: -90%;
+  background: -webkit-linear-gradient(transparent, #FFF) left repeat;
+  background: linear-gradient(transparent, #FFF) left repeat; 
+} {
+}

@@ -1,0 +1,36 @@
+{
+  "name": "jamille-queiroz-fotografia",
+  "version": "1.0.0",
+  "description": "Photography portfolio site",
+  "private": true,
+  "scripts": {
+    "deploy": "npm run clean && npm run build && npm run rsync",
+    "rsync": "rsync --rsync-path='/usr/bin/sudo /usr/bin/rsync' -azP ./public/ admin@jamillequeiroz.com:../../var/www/jamillequeiroz.com/htdocs",
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "imgs": "svgo -f ./public/imagens/ && find ./public/imagens -name '*.jpg' | imageoptim",
+    "thumbs": "mkdir thumbs && mogrify -resize 350 -path ./thumbs *.jpg && mogrify -gravity center -crop 275x275+0+0 ./thumbs/*.jpg",
+    "test": "nwb test"
+  },
+  "dependencies": {
+    "blazy": "^1.5.2",
+    "history": "^1.13.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-imageloader": "^2.1.0",
+    "react-images": "^0.2.1",
+    "react-masonry-component": "^2.0.0",
+    "react-motion": "^0.3.1",
+    "react-router": "^1.0.1",
+    "react-rpg": "0.0.2",
+    "react-spinkit": "^1.1.4",
+    "recompose": "^0.11.2"
+  },
+  "devDependencies": {
+    "nwb": "~0.2.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}
