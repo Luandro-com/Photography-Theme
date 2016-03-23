@@ -1,6 +1,6 @@
-# jamille-queiroz-fotografia
+# Photography Theme
 
-Photography portfolio page.
+Photography portfolio page built with [React](https://facebook.github.io/react/).
 
 ## Prerequisites
 
