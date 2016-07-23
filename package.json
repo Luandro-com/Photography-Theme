@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "deploy": "npm run clean && npm run build && npm run rsync",
-    "rsync": "rsync --rsync-path='/usr/bin/sudo /usr/bin/rsync' -azP ./public/ admin@jamillequeiroz.com:../../var/www/jamillequeiroz.com/htdocs",
+    "rsync": "rsync --rsync-path='/usr/bin/sudo /usr/bin/rsync' -azP ./public/ shurato@luandro.com.com:../../var/www/photography.luandro.com/htdocs",
     "build": "nwb build",
     "clean": "nwb clean",
     "start": "nwb serve",
